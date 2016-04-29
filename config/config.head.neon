@@ -1,0 +1,3 @@
+services:
+	headControl:
+		class: Wame\HeadControl\HeadControl
