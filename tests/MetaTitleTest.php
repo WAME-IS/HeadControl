@@ -20,7 +20,7 @@ class MetaTitleTest extends PHPUnit_Framework_TestCase
     {
 		$component = $this->headControl;
 		
-		$metaTitle = $component->getType(MetaTitle);
+		$metaTitle = $component->getMetaType(MetaTitle);
 		$metaTitle->setContent('Nadpis');
 
         // Assert
