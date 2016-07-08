@@ -5,19 +5,20 @@ namespace Wame\HeadControl;
 use Wame\HeadControl\IMetaType;
 use Wame\HeadControl\Exceptions\WrongMetaTypeException;
 
-class HeadControl extends \Nette\Application\UI\Control
+class HeadControl extends \Wame\Core\Components\BaseControl
 {	
 	/** @var array */
 	private $heads = [];
-	
+    
+    
 	/**
-	 * Get type
+	 * Get meta type
 	 * 
 	 * @param IMetaType $type					MetaType
 	 * @return \Wame\MetaControl\MetaControl	MetaType
 	 * @throws WrongMetaTypeException			
 	 */
-	public function getType($type)
+	public function getMetaType($type)
 	{
 		// TODO: otestovat ci funguje overenie spravne
 		if($type instanceof IMetaType) {
@@ -33,6 +34,8 @@ class HeadControl extends \Nette\Application\UI\Control
 	 */
 	public function render()
 	{
+        
+        
 		$array = [];
 		
 		foreach($this->heads as $head) {
