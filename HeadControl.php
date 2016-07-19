@@ -10,7 +10,6 @@ class HeadControl extends \Wame\Core\Components\BaseControl
 	/** @var array */
 	private $heads = [];
     
-    
 	/**
 	 * Get meta type
 	 * 
