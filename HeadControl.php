@@ -40,8 +40,13 @@ class HeadControl extends \Wame\Core\Components\BaseControl
 		foreach($this->heads as $head) {
 			$array[] = $head->render();
 		}
-		
+        
 		echo implode("\n", $array);
 	}
+    
+    protected function componentRender()
+    {
+        //nothing
+    }
 	
 }
