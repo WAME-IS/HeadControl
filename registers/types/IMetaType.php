@@ -1,6 +1,6 @@
 <?php
 
-namespace Wame\HeadControl;
+namespace Wame\HeadControl\Registers\Types;
 
 interface IMetaType
 {

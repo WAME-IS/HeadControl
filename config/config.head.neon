@@ -1,3 +1,13 @@
 services:
-	headControl:
-		class: Wame\HeadControl\HeadControl
+
+    # Factories
+    - Wame\HeadControl\Components\IHeadControlFactory
+
+    # Registers
+    MetaTypeRegister:
+        class: Wame\HeadControl\Registers\MetaTypeRegister
+        setup:
+            - add(Wame\HeadControl\Registers\Types\MetaTitle(), title)
+            - add(Wame\HeadControl\Registers\Types\MetaDescription(), description)
+            - add(Wame\HeadControl\Registers\Types\MetaKeywords(), keywords)
+            - add(Wame\HeadControl\Registers\Types\MetaRobots(), robots)
