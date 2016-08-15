@@ -17,16 +17,11 @@
 
 ### Presenter
 
-	/** @var HeadControl @inject */
-	public $headControl;
+/** @var MetaTypeRegister @inject */
+public $metaTypeRegister;
 
-	public function createComponentHeadControl()
-	{
-		$component = $this->headControl;
-		$component->getType(MetaTitle)->setContent('Nadpis');
-		return $component;
-	}
+... $this->metaTypeRegister->getByName('title')->setContent("Title");
 
 ### Template
 
-	{control headControl}
+{control headControl}
