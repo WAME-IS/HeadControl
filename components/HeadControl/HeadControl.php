@@ -36,9 +36,9 @@ class HeadControl extends BaseControl
             $str = $metaType->render();
             if ($str) {
                 if ($out) {
-                    $out += "\n";
+                    $out .= "\n";
                 }
-                $out += $str;
+                $out .= $str;
             }
         }
         echo $out;
