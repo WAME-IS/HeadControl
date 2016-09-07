@@ -24,6 +24,7 @@ class HeadControl extends BaseControl
     {
         parent::__construct($container, $parent, $name);
         $this->metaTypeRegister = $metaTypeRegister;
+        $this->hasContainer = false;
     }
 
     /**
