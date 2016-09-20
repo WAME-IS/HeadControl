@@ -4,13 +4,13 @@ namespace Wame\HeadControl\Registers\Types;
 
 class MetaRobots implements IMetaType
 {
-
     /** @var string */
     private $content;
 
+    
     public function render()
     {
-        return '<title>' . $this->content . '</title>';
+        return '<meta name="robots" content="' . $this->content . '">';
     }
 
     function getContent()
@@ -22,4 +22,5 @@ class MetaRobots implements IMetaType
     {
         $this->content = $content;
     }
+    
 }

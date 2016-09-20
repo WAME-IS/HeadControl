@@ -7,9 +7,9 @@ use Wame\HeadControl\Registers\Types\IMetaType;
 
 class MetaTypeRegister extends BaseRegister
 {
-
     public function __construct()
     {
         parent::__construct(IMetaType::class);
     }
+    
 }

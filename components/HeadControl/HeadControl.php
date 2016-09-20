@@ -9,30 +9,30 @@ use Wame\HeadControl\Registers\MetaTypeRegister;
 
 interface IHeadControlFactory
 {
-
     /** @return HeadControl */
     public function create();
 }
 
 class HeadControl extends BaseControl
 {
-
     /** @var MetaTypeRegister */
     private $metaTypeRegister;
-
+    
+    
     public function __construct(Container $container, MetaTypeRegister $metaTypeRegister, IContainer $parent = NULL, $name = NULL)
     {
         parent::__construct($container, $parent, $name);
+        
         $this->metaTypeRegister = $metaTypeRegister;
         $this->hasContainer = false;
     }
-
-    /**
-     * Render
-     */
+    
+    
+    /** {@inheritDoc} */
     public function render()
     {
         $out = "";
+        \Tracy\Debugger::barDump($this->metaTypeRegister->getAll());
         foreach ($this->metaTypeRegister->getAll() as $metaType) {
             $str = $metaType->render();
             if ($str) {
@@ -45,8 +45,10 @@ class HeadControl extends BaseControl
         echo $out;
     }
 
+    /** {@inheritDoc} */
     protected function componentRender()
     {
         //nothing
     }
+    
 }
