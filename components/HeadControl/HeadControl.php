@@ -32,7 +32,6 @@ class HeadControl extends BaseControl
     public function render()
     {
         $out = "";
-        \Tracy\Debugger::barDump($this->metaTypeRegister->getAll());
         foreach ($this->metaTypeRegister->getAll() as $metaType) {
             $str = $metaType->render();
             if ($str) {
