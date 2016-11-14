@@ -1,0 +1,4 @@
+services:
+	ComponentRegister:
+		setup:
+			- add(Wame\HeadModule\Vendor\Wame\ComponentModule\HeadComponent())

@@ -33,7 +33,7 @@ class HeadControl extends BaseControl
     {
         $out = "";
         foreach ($this->metaTypeRegister->getAll() as $metaType) {
-            $str = $metaType->render();
+            $str = $metaType->setPresenter($this->getPresenter())->render();
             if ($str) {
                 if ($out) {
                     $out .= "\n";
