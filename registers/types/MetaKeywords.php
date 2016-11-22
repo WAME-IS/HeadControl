@@ -11,7 +11,7 @@ class MetaKeywords extends MetaType
     /** {@inheritDoc} */
     public function render()
     {
-        return '<meta name="keywords" content="' . ($this->content ?: $this->getSettingsManager()->General->keywords) . '">';
+        return '<meta name="keywords" content="' . ($this->content ?: $this->getSettingsManager()->get('General', 'keywords')) . '">';
     }
 
     /** {@inheritDoc} */

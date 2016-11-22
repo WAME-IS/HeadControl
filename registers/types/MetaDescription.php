@@ -13,7 +13,7 @@ class MetaDescription extends MetaType
     /** {@inheritDoc} */
     public function render()
     {
-        return '<meta name="description" content="' . (Strings::truncate($this->content, 150, null) ?: $this->getSettingsManager()->General->description) . '">';
+        return '<meta name="description" content="' . (Strings::truncate($this->content, 150, null) ?: $this->getSettingsManager()->get('General', 'description')) . '">';
     }
 
     /** {@inheritDoc} */
